@@ -17,3 +17,6 @@ def inicio(request):
         "example_list": [23, 5, 6, 7, 8, 9]
     }
     return render(request, "base.html", context=context)
+
+def login(request):
+    return render(request, "login.html")

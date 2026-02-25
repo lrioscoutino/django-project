@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+{% if request.user.is_authenticated %}
+    menu {{request.user}}
+{% else %}
+    <form>
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit" value="Entrar">
+</form>
+{% endif %}
+
+
+</body>
+</html>
