@@ -15,10 +15,10 @@
 {% endfor %}
 
 {% if request.user.is_authenticated %}
-{{ request.user }}
-    menu
+    <p>Usuario: {{ request.user.username }}</p>
+    <a href="{% url 'logout' %}">Cerrar sesion</a>
 {% else %}
-    login formulario
+    <a href="{% url 'login' %}">Iniciar sesion</a>
 {% endif %}
 </body>
 </html>
